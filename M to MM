@@ -1,0 +1,55 @@
+#include <iostream>//etong library nato is for input and output standard
+using namespace std;//para hindi na mag lagay ng std sa lahat ng cout and cin
+
+int main() {//this is the main medtod for the whole program
+    int choice; // variable to store the user's menu choice
+    float value; // variable to store user input value
+
+	//all cout is to display and instruction for mune
+    cout<<"===================================================="<<endl;
+	cout<<"|                                                  |"<<endl;
+	cout<<"|                   CONVERTER                      |"<<endl;
+	cout<<"+==================================================+"<<endl;
+	cout<<"|        [1]  centimeter to millimeter             |"<<endl;
+	cout<<"|        [2]  millimeter to centimeter             |"<<endl;
+	cout<<"|        [3]  centimeter to meter                  |"<<endl;
+	cout<<"|        [4]  meter to centimeter                  |"<<endl;
+	cout<<"+==================================================+"<<endl;
+	cout<<"Enter your choice:";
+	cin>>choice;//eto ay para sa user sa choice input
+
+    switch(choice) {			//switch para sa mapipili at dederetso sa mismo like pumili ka ng 1 pupunta sya sa converter centimeter to millimeter ganon din sa 2,3 and 4
+        case 1:			// eto ay para sa centimeter to millimeter at para ma identify yung chioce
+            cout << "Enter value in centimeters: ";			//intruction para sa pag lagay ng value
+            cin >> value;			//para makapag input ng value
+            value= value * 10;			// eto ang formula para sa centimeter to millimeter na yung value na nilagay mo multifly by 10
+            cout << "Millimeters = " << value <<endl;			// eto ang mag didisplay sa sagot para sa cintemeter to millimeter
+            break;			// breake ay para ma stop ang switch statement
+
+        case 2:					// eto ay para sa millimeter to centimeter at para ma identify yung chioce
+            cout << "Enter value in millimeters: ";				//intruction para sa pag lagay ng value
+            cin >> value;			//para makapag input ng value
+            value=value/10;
+            cout << "Centimeters = " << value  << endl;			// eto ang mag didisplay sa sagot para sa  millimeter to cintemeter 
+            break;			// breake ay para ma stop ang switch statement
+
+        case 3:			// eto ay para sa centimeter to meter at para ma identify yung chioce
+            cout << "Enter value in centimeters: ";			//intruction para sa pag lagay ng value
+            cin >> value;				//para makapag input ng value
+            value=value/100;				// eto ang formula para sa centimeter to meter na yung value na nilagay mo divide by 100
+            cout << "Meters = " << value << endl;			// eto ang mag didisplay sa sagot ng centimeter to meter
+            break;			// breake ay para ma stop ang switch statement
+
+        case 4:			// eto ay para sa meter to centimeter at para ma identify the chioce
+            cout << "Enter value in meters: ";			//intruction para sa pag lagay ng value
+            cin >> value;				//para makapag input ng value
+            value = value*100;				// eto ang formula para sa meter to centimeter na yung value na nilagay mo multifly by 100
+            cout << "Centimeters = " << value << endl; // eto ang mag didisplay sa sagot para sa meter to centimeter
+            break;			// breake ay para ma stop ang switch statement
+
+        default:// default ayy kung mali ang nalagay mong choice or wala dun sa choice 
+            cout << "Invalid choice!" << endl; // display para sa mali mong choice
+    }
+
+    return 0;// return 0 para mag send back ang mga value na nasa code kapag tapos na at mapagana ng maayos ang program
+}
