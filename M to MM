@@ -1,9 +1,9 @@
-#include <iostream>//etong library nato is for input and output standard
-using namespace std;//para hindi na mag lagay ng std sa lahat ng cout and cin
+#include <iostream>    //etong library nato is for input and output standard
+using namespace std;  //para hindi na mag lagay ng std sa lahat ng cout and cin
 
-int main() {//this is the main medtod for the whole program
-    int choice; // variable to store the user's menu choice
-    float value; // variable to store user input value
+int main() {       //this is the main medtod for the whole program
+    int choice;    // variable to store the user's menu choice
+    float value;  // variable to store user input value
 
 	//all cout is to display and instruction for mune
     cout<<"===================================================="<<endl;
@@ -16,7 +16,7 @@ int main() {//this is the main medtod for the whole program
 	cout<<"|        [4]  meter to centimeter                  |"<<endl;
 	cout<<"+==================================================+"<<endl;
 	cout<<"Enter your choice:";
-	cin>>choice;//eto ay para sa user sa choice input
+	cin>>choice;    //eto ay para sa user sa choice input
 
     switch(choice) {			//switch para sa mapipili at dederetso sa mismo like pumili ka ng 1 pupunta sya sa converter centimeter to millimeter ganon din sa 2,3 and 4
         case 1:			// eto ay para sa centimeter to millimeter at para ma identify yung chioce
@@ -44,11 +44,11 @@ int main() {//this is the main medtod for the whole program
             cout << "Enter value in meters: ";			//intruction para sa pag lagay ng value
             cin >> value;				//para makapag input ng value
             value = value*100;				// eto ang formula para sa meter to centimeter na yung value na nilagay mo multifly by 100
-            cout << "Centimeters = " << value << endl; // eto ang mag didisplay sa sagot para sa meter to centimeter
+            cout << "Centimeters = " << value << endl;         // eto ang mag didisplay sa sagot para sa meter to centimeter
             break;			// breake ay para ma stop ang switch statement
 
-        default:// default ayy kung mali ang nalagay mong choice or wala dun sa choice 
-            cout << "Invalid choice!" << endl; // display para sa mali mong choice
+        default:       // default ayy kung mali ang nalagay mong choice or wala dun sa choice 
+            cout << "Invalid choice!" << endl;      // display para sa mali mong choice
     }
 
     return 0;// return 0 para mag send back ang mga value na nasa code kapag tapos na at mapagana ng maayos ang program
